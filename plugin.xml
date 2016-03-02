@@ -1,28 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        id="badr.moe.crosswalk-permissions"
-        version="0.1">
-    <name>Cordova Crosswalk Permissions</name>
-    <license>Apache 2.0 License</license>
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="badr.moe.crosswalk-permissions"
+        version="0.0.1"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>CrosswalkPermissions</name>
+    <description>Request the necessary crosswalk permissions on Android for a Cordova project.</description>
     <author>Mohamed Badr</author>
-    <description>
-        Request the necessary crosswalk permissions on Android for a Cordova project.
-    </description>
-    <info>
-        This plugin replaces the need for adding permisions to the AndroidManifest.xml
-        file when using Crosswalk with Cordova.
-    </info>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version=">=2.9"/>
+    </engines>
     <platform name="android">
-        <config-file target="AndroidManifest.xml" parent="/manifest">
-            <uses-feature android:name="android.hardware.camera" />
-            <uses-feature android:name="android.hardware.camera.autofocus" />
-            <uses-feature android:glEsVersion="0x00020000" android:required="true"></uses-feature>
-            <uses-permission android:name="android.permission.INTERNET" />
-            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-            <uses-permission android:name="android.permission.RECORD_AUDIO" />
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.CAMERA" />
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-feature android:name="android.hardware.camera"/>
+            <uses-feature android:name="android.hardware.camera.autofocus"/>
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+            <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.CAMERA"/>
         </config-file>
     </platform>
 </plugin>
