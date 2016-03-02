@@ -9,12 +9,10 @@
     <description>
         Request the necessary crosswalk permissions on Android for a Cordova project.
     </description>
-
     <info>
         This plugin replaces the need for adding permisions to the AndroidManifest.xml
         file when using Crosswalk with Cordova.
     </info>
-
     <platform name="android">
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-feature android:name="android.hardware.camera" />
